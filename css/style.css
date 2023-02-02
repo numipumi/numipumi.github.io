@@ -1,0 +1,189 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    position: relative; /* а в родителе устанавливается позиционирование релатив */
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+nav { /* если вынесла тег в header, то смогу добавит еще одну шапку */
+
+    height: 53px;
+    background: #212121;
+}
+/* header nav {
+        padding: 10px 70px ;
+} нав с пэддингами */
+.menu {
+    display: flex;
+    justify-content: space-around; /* выравнивание по горизонтали */
+    padding: 13px 70px;
+    margin: 0;
+    list-style-type: none; /* все точки исчезнуть, имеет отнощение к ul */
+}
+.menu .menu_link {
+    font-weight: 300;
+    font-size: 15px;
+    /* line-height: 15px; */
+    color: $light;
+}
+.menu .menu_item {
+    border-right: 2px dotted black;
+    padding-right: 28px;
+}
+.subheader{
+    position: absolute;/* чтобы картинка заезжала на меню */
+    width: 100%; /* ширина 100% от родительского блока header */
+    height: 87px;
+    background: rgba(0, 0, 0, .6); /* через альфа-канал */
+    /* opacity: 0.6; /* прозрачность */
+} 
+.subheader .subheader_logo{
+    display: block;
+    max-width: 100%; /* за счет колонки размер будет определен не больше */
+    margin-top: 16px;
+}
+.subheader .subheader_official{
+    margin-top: 6px;
+    font-size: 13px;
+    color: $light;
+    opacity: 0,5;
+}
+.subheader .subheader_call{
+    margin-top: 19px;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: right;
+    color: $light;
+}
+.subheader .subheader_phone{
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 12px;/* Для блочных элементов определяет минимальную высоту строки текста. ОБРАЩАЙ ВНИМАНИЕ */
+    color: $light;
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+}
+.subheader .subheader_btn{
+    margin-top: 19px;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $light;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+    width: 172px;
+    height: 46px;
+    background: linear-gradient(0deg, $tifany 0%, #4CE2FF 100%);
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+    border: none;
+    border-radius: 4px;/* закругление кнопки, было указано в Фигме */
+}
+.first{
+    min-height: 700px; /* высота секции */
+    background: url('../img/bg/uber_bg.jpg') center center/cover no-repeat;
+    padding: 140px 0 135px 0;
+}
+.first .promo_header{
+    margin: 0;
+    font-weight: 900;
+    font-size: 60px;
+    align-items: center;
+    text-align: center;
+    color: $light;
+    line-height: 60px;
+}
+.first .promo_subheader{
+    margin-top: 22px;
+    font-weight: 900;
+    font-size: 36px;
+    align-items: center;
+    text-align: center;
+    color: $light;
+    line-height: 36px;
+}
+.first .promo_descr{
+    margin-top: 23px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: $light;
+}
+.first .promo_btn{
+    display: block;
+    margin: 150px auto 0 auto;
+    width: 259px;
+    height: 63px; 
+    background: linear-gradient(0deg, $tifany 0%, #4CE2FF 100%);
+    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $light;
+}
+.second{
+    min-height: 767px;
+    background-color: $light;
+}
+.second .container .btn_second{
+    display: block;
+    margin: 20px 603px auto auto;
+    width: 113px;
+    height: 24px;
+    font-weight: 400;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: black;
+    color: $light;
+    mix-blend-mode: normal;
+}
+.second .container{
+    margin-top: 35px;
+} 
+.second .promo_reasons{
+    margin-top: 41px;
+    font-weight: 700;
+    font-size: 38px; 
+    text-align: center;
+    text-transform: uppercase;
+    color: $dark;
+}
+
+/* .second .eight_reason .img .credit{
+    position: absolute;
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    background: $tifany;
+} */
+
+.second .container .items_logo .circle{
+    margin-top: 60px;
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    shape-outside: circle(35%);
+    background: $tifany;  
+    object-fit: none; /* делает картинку красивой и адаптированной */
+  /*   display:block;
+    margin-left: auto;
+    margin-right: auto  */ /* делает картинку по центру */
+}
+.second .container .items_logo .reason_text{
+    font-size: 17px;
+    line-height: 21px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 156px;
+    margin-top: -124px;
+}
+.second .container .items_logo .tifany{
+    color: $tifany;
+}
